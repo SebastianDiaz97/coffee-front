@@ -1,0 +1,35 @@
+
+.container{
+    position: absolute;
+    border-radius: 16px;
+    left: 0;
+    right: 0;
+    background-color: rgb(28, 29, 31); 
+    font-weight: bold;
+    padding-top: 100px;
+}
+
+.info{
+    position: relative;
+    margin: auto;
+}
+
+.title{
+    font-size: 2rem;
+    color: #fef7ee;
+}
+.info{
+    font-size: 1rem;
+    color: #6F757C;
+    width: 65%;
+}
+.select{
+    font-size: .875rem;
+    color: #FEF7EE;
+}
+
+.vector{
+    position: absolute;
+    left: 51%;
+    top: 30px;
+}

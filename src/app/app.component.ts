@@ -7,4 +7,9 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'coffee';
+  valor: string =''
+  addItem(newItem: number){
+    this.valor = `${newItem/2}px`
+    console.log(this.valor);
+  }
 }

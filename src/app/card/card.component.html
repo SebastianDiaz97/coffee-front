@@ -1,0 +1,47 @@
+<div class="container mx-auto row row-cols-lg-3 row-cols-md-2 row-cols-1">
+  <div class="card col" *ngFor="let item of array">
+    <div class="imagen-card">
+      <img [src]="item.image" class="card-img-top" alt="..." />
+      <p [hidden]="!item.popular" class="popular">Popular</p>
+    </div>
+    <div class="card-body">
+      <div class="d-flex justify-content-between">
+        <h5 class="card-title">{{ item.name }}</h5>
+        <p class="price">{{ item.price }}</p>
+      </div>
+
+      <div class="nota text-start d-flex justify-content-between">
+        <div class="nota__datos">
+          <!-- <div class="d-flex align-items-center" [hidden]="item.rating!=null? true : false"> -->
+          <div
+            class="d-flex align-items-center"
+            [ngClass]="item.rating == null ? 'invisible' : ''"
+          >
+            <img
+              src="../../assets/dccl--frontend-simple-coffee-listing/Star_fill.svg"
+              alt=""
+            />
+            <p class="m-0">
+              {{ item.rating }}
+              <span class="votes">({{ item.votes }} votes)</span>
+            </p>
+          </div>
+          <div
+            class="d-flex"
+            [ngClass]="item.rating != null ? 'invisible' : ''"
+          >
+            <img
+              src="../../assets/dccl--frontend-simple-coffee-listing/Star.svg"
+              alt=""
+            />
+            <!-- [hidden]="item.rating!=null? true : false" -->
+            <p class="noStar m-0">No ratings</p>
+          </div>
+        </div>
+        <p class="fw-bold" [ngClass]="item.available ? 'invisible' : ''">
+          Sold out
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
